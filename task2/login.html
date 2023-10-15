@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive web</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+        
+        <style>
+            button{
+                animation: animate 4s 0s infinite linear;
+            }
+           
+            @keyframes animate{
+                0%{
+                    background-color: grey;
+                }
+                25%{
+                    background-color: aqua;
+                }
+                50%{
+                    background-color:yellowgreen;
+                }
+                75%{
+                    background-color: green;
+                }
+                100%{
+                    background-color: goldenrod;
+                }
+            }
+            form{
+                animation: formAnimation 4s 0s infinite linear;
+            }
+            @keyframes formAnimation{
+                0%{  
+                    border: 5px solid gray;
+                    box-shadow: 10px 10px 20px gray;
+                }
+                25%{
+                    border: 5px solid aqua;
+                    box-shadow: 10px 15px 20px aqua;
+                }
+                50%{
+                    border: 5px solid yellowgreen;
+                    box-shadow: 10px 10px 20px yellowgreen;
+                }
+                75%{
+                    border: 5px solid green;
+                    box-shadow: 10px 10px 20px green;
+                }
+                100%{
+                    border: 5px solid goldenrod;
+                    box-shadow: 10px 10px 20px goldenrod;
+                }
+            }
+            input{
+                animation:  formAnimation 4s 0s infinite linear;
+            }
+            h2{
+                animation: h2anim 4s 0s infinite linear;
+            }
+            @keyframes h2anim{
+                0%{  
+                   color:gray;
+                }
+                25%{
+                    color: aqua;
+                }
+                50%{
+                    color:  yellowgreen;
+                }
+                75%{
+                    color:  green;
+                }
+                100%{
+                    color:  goldenrod;
+                }
+            }
+        </style>
+</head>
+<body style="background-color:black;">
+    <div class="container py-5">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="align-items-center col-xl-5">
+                <form class="bg-dark text-white p-5" style="border-radius: 20px;" name="RegForm"
+                    onsubmit="return check()" method="post" id="loginForm">
+                    <h2 class="fw-bold mb-4 text-uppercase text-center">Login</h2>
+                    <div class="mb-4">
+                        <label>Username</label>
+                        <input type="text" class="form-control form-control-lg" name="EMail" id="username" placeholder="enter email/alphanumeric/phone no.">
+                    </div>
+                    <div class="form-white mb-4">
+                        <label>Password</label>
+                        <input type="password" class="form-control form-control-lg" id="password">
+
+                    </div>
+                    <p class="small mb-5 text-center"><a href="#!">Forgot password?</a></p>
+                    <div class="d-grid">
+                        <button class="btn btn-primary btn-lg mb-3 " type="submit" name="Submit"><a href="#">Login</a></button>
+                    </div>
+                    <p class="text-center">Don't have an account?
+                        <a href="bootstrap.html" class="text-white fw-bold">Sign Up</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function check() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            if (username.trim() === '' || password.trim() === '') {
+                alert('Please enter both username and password.');
+                return;
+            }
+            else {
+                var email = document.forms.RegForm.EMail.value;
+                var regPhone = /^\(?([0-9]{3})\)?[-.]?([0-9]{3})[-.]?([0-9]{4})$/;
+                var regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+                var al =/^[A-Za-z]{2,10}(?:\d{1,8})$/;
+
+                if (isNaN(email)) {
+                    if (regEmail.test(email)) {
+                        valid();
+                        document.location.href="../hiringPage.html";
+                    }
+                    else {
+                        if (!al.test(email)) {
+                            window.alert("Please enter a valid username.");
+                            email.focus();
+                            return false;
+                        }
+                        else { valid(); }
+                    }
+                }
+                else {
+                    if (regPhone.test(email)) {
+                        valid();
+                    }
+                    else {
+                        alert("Please enter a valid username.");
+                    }
+                }
+            }
+        }
+        function valid() {
+            alert("submitted successfully!");
+            return true;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+nav{
+    display: grid;
+    grid-template-columns: 40px 1fr 1fr;
+    grid-template-rows: 10vh 100%;  
+}
+.leftmove{
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.i{
+  display: grid;
+  grid-template-columns: 40px;
+}
+#i{
+  display: none;
+  height: 100%;
+  width: 100%;
+  float: left;
+  transform: scale(2);
+  text-align: center;
+  margin-top: 6vh;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+ul {
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    place-items: center;
+  }
+  li{
+    align-items: center;
+    color:  black;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px;
+  }
+  a:hover{
+    color:goldenrod;
+    background-color: gold;
+    width: 100%;
+}
+
+button.search{
+display: grid;
+grid-template-columns: repeat(6,1fr);
+grid-column: 5/6;
+margin: 10px;
+width: 70px;
+height: 36px;
+background-color:yellow;
+font-size: 17px;
+border-radius: 20px;
+text-align: center;
+padding: 1%;
+} 
+.outer{
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+  grid-template-rows: 1fr;
+  background-color: red;
+}
+.inner{
+  grid-column: 2/3;
+  height: auto;
+  background-color:green;
+}
+input{
+    width: 262px;
+    height: 24px;
+    margin-left: 59px;
+    margin: 9px;
+  }
+
+button{
+width: 240px;
+height: 52px;
+margin: 50px;
+font-size: 32px;
+font-weight: bold;
+background: transparent;
+font-family: arial;
+margin-inline: 60px;
+border-color: yellow;
+}  
+button:hover{
+background-color: goldenrod;
+} 
+h1{
+text-align: center;
+}
+
+a{
+text-decoration:solid;
+}    
+h2{
+font-family: arial;
+font-size: 52px;
+color:rgba(0, 0, 0, 0.698);
+}
+.slider{
+  position: relative;
+  width: 95%;
+  height: 65vh;
+  margin: 2.5%;
+  background-color: white;
+  overflow: hidden;
+  border: 2px solid yellow;
+}
+.slider div{
+  width: 100%;
+  height: 100%;
+}
+.slider div img{
+  width: 100%;
+  height: 100%;
+   
+}
+
+
+/* .....................................res,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, */
+@media screen and (max-width: 620px){
+  nav{
+    height: 40px;
+   width: 40px;
+  float: left;
+  z-index: 1;
+} 
+#i{
+  display: block;
+}
+a{
+  text-decoration: none;
+  color: pink;
+}
+li{
+  display:block;
+  color: pink;
+  font-size: 35px;
+  font-weight: bold;
+}
+ul{
+  display: none;
+}
+button.search{
+  display: none;
+}
+.menu{
+  display: block;
+  width: 85vw;
+  float: left;
+  height: 50vh;
+  padding: 10px;
+  background-color: rgb(54, 65, 54);
+  margin-top: 40px;
+  z-index: 9;
+  text-align: center;
+ }
+
+  h2{
+    font-family: arial;
+    font-size: 32px;
+    color:rgba(0, 0, 0, 0.698);
+    margin: 1%;
+    }
+   
+}
+.slider{
+  position: relative;
+  width: 95%;
+  height: 50vh;
+  margin: 2.5%;
+  background-color: white;
+  overflow: hidden;
+}
+@keyframes fade {
+  0%{translate: 0 0;;transition-delay: 4;}
+  25%{translate:0 -50vh ;transition-delay: 4;}
+  50%{translate:0 -100vh ; }
+  75%{translate:0 -150vh ;}
+  100%{translate: 0 -150vh;}
+  
+}
+/* ......................................res2.......................... */
+@media screen and (max-width: 376px) {
+  h2{
+    font-family: arial;
+    font-size: 20px;
+    color:rgba(0, 0, 0, 0.698);
+    margin: 1%;
+    }
+    button{
+      width: 100px;
+      height: 32px;
+      margin: 10px;
+      font-size: 10px;
+      font-weight: bold;
+      background: transparent;
+      font-family: arial;
+      border-color: yellow;
+      }  
+}
+/* .............................jobPage.................................. */
+.jobPage{
+  width: 100%;
+  height: 70vh;
+  margin-top: 5%;
+  border: 3px solid goldenrod;
+  background-color: rgb(95, 97, 99);
+}
+.text{
+  background-color:blueviolet;
+  text-align: center;
+}
+.job2{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+.job2 div{
+  width: 95%;
+  height: 50vh;
+  margin: 2%;
+  border: 5px solid blueviolet;
+}
+img{
+  width: 100%;
+  height: 80%;
+}
+h3{
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 30px;
+  padding-bottom: 5px;
+  background-color: goldenrod;
+}
+.job2 div:hover{
+  border: 5px solid goldenrod;
+  transform: scale(1.04);
+  color: white;
+}
+/* ............................res,,,,,,,,,,,,,,,,..........,,,,,,,,, */
+@media  screen and (max-width:1000px) {
+  .job2{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr 1fr;
+  }
+  .jobPage{
+    height: 140vh;
+  }
+  
+}
+@media  screen and (max-width:1000px) {
+  .job2{
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(4,1fr);
+  }
+  .jobPage{
+    height: 230vh;
+  }
+  h3{
+    font-size: 25px;
+    text-justify: center;
+  }
+}
+/* ...............................company.......................... */
+.company{
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  margin-top: 5%;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(4,1fr);
+}
+.company div{
+  width: 90%;
+  height: 20vh;
+  margin: 10px;
+}
+.company img:hover{
+  transform: scale(1.02);
+  border: 1px solid green;
+}
+@media  screen and (max-width:1000px){
+  .company{
+    grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(4,1fr);
+  height: 140vh;
+  }
+}
+@media  screen and (max-width:750px){
+  .company{
+    grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(5,1fr);
+  height: 200vh;
+  }
+}

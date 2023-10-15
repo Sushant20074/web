@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="hiringPage.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<script>
+  $(document).ready(function(){
+    $("#home").click(function(){
+      window.location.href="index.html";
+    });
+    $("input").on('mouseenter',function(){
+      $(this).addClass('jqueryHover');
+    });
+    $("input").on('mouseleave',function(){
+      $(this).removeClass('jqueryHover');
+    });
+    $(".submit").click(function(){
+      $("body").css("background-color","green");
+      alert("Application submitted");
+      document.location.href="./index.html";
+    });
+    var width = $(window).width();
+    var count=0;
+    if(width<=500)
+     if(count==0){
+      $('nav').click(function()
+      {
+        $('ul').addClass("menu");
+        
+      });
+      count=count+1;
+    }
+    else{
+      $('nav').click(function(){
+        $('ul').css('display','none');
+        $(this).css("background-color",'red');
+        count=count-1;
+      });
+    }
+    var length=$(document).width();
+  if(length<=620){
+    $('i').click(function()
+    {
+      $('ul').addClass("menu").toggle();
+    }); 
+  }
+  });
+</script>
+<body>
+    <nav>
+      <div class="i">
+        <i class="fa fa-bars" id="i"></i>
+      </div>
+        <ul>
+            <li><a id="home" title="Home" >Home</a></li>
+            <li><a title="See availables jobs">Jobs</a></li>
+            <li><a title="companies available">Company</a></li>
+            <li><a title="job related news">News</a></li>
+            <li><a title="help">Contact</a></li>
+            <li><a title="know about us">About</a></li>
+          </ul> 
+        </nav>
+        <marquee direction="right">Get your dream job</marquee>  
+        <img src="img/personal.png">
+        <h1 class="personal">Personal Details</h1>
+     <div class="header">
+        <label>First Name</label><br>
+        <input type="text" placeholder="First Name"><br>
+        <label>Last Name</label><br>
+        <input type="text" placeholder="Last Name"><br>
+        <label>Date of Birth</label><br>
+        <input type="date" placeholder="Date of Birth"><br>
+        <label>Age</label><br>
+        <input type="number" placeholder="Age"><br>
+        <label>Phone Number</label><br>
+        <input type="number" placeholder="Phone Number"><br>
+        <label>Email</label><br>
+        <input type="email" placeholder="Email"><br>
+        <label>Address</label><br>
+        <input type="text" placeholder="Address"><br>
+        <label>City</label><br>
+        <input type="text" placeholder="City"><br>
+        <label>State</label><br>
+        <input type="text" placeholder="State"><br>
+        <label>Pin Code</label><br>
+        <input type="number" placeholder="Pin Code"><br>
+        <label>Your Contacting Time:</label>
+        <select>
+            <option >Morning</option>
+            <option >Lunch Time</option>
+            <option >Evening</option>
+            <option >Afternoon</option>
+            <option>Doesn't Matter</option>
+          </select>
+        </div>
+<hr>
+          <div class="education">
+            <label>College</label><br>
+            <input type="text" placeholder="College/Institute"><br>
+            <label>Department</label><br>
+            <input type="text"><br>
+            <label>Marks Percentage</label><br>
+            <input type="number"><br>
+            <label>Date of Completion</label><br>
+            <input type="date"><br>
+          </div>
+          <img class="education" src="img/e1.png">
+          <h5 class="h51">Educationl Details</h5>
+    <hr class="hr1">
+ <img class="company" src="img/comp.png">
+ <div class="company">
+<label>Sector</label>
+<select>
+  <option>IT</option>
+  <option>Computer Science</option>
+  <option>Mechanical</option>
+  <option>Civil</option>
+  <option>BBA</option>
+  <option>CyberSecurity</option>
+</select><br>
+<label>Choose Dream Company</label>
+<select>
+  <option>Amazon</option>
+  <option>Apple</option>
+  <option>Microsoft</option>
+  <option>Google</option>
+  <option>Flipkart</option>
+  <option>Wipro</option>
+  <option>TCS</option>
+</select><br>
+<label>Aspected salary</label><br>
+<input type="number"><br>
+<label>Company Address</label><br>
+<input type="text"><br>
+<label>Date of Joining</label><br>
+<input type="date"><br>
+<button class="submit">Submit</button>
+ </div>  
+</body>
+</html>

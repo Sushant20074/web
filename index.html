@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="index.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+<script>
+ $(document).ready(function(){
+  var length=$(document).width();
+  if(length<=620){
+    $('i').click(function()
+    {
+      $('ul').addClass("menu").toggle();
+    }); 
+  }
+  $(".search").click(function(){
+    document.location.href="./task2/login.html";
+  });
+ });
+</script>
+<body>
+    <!-- <video width="1520px" autoplay loop>
+        <source src="video/front.mp4" type="video/mp4">
+       </video> -->
+     <nav>
+      <div class="i">
+      <i class="fa fa-bars" id="i"></i>
+    </div>
+        <ul>
+            <li><a href="./index.html" title="Home" >Home</a></li>
+            <li><a href="#jobPage" title="See available jobs">Jobs</a></li>
+            <li><a href="#company" title="companies available">Company</a></li>
+            <li><a title="job related news" >News</a></li>
+            <li><a title="help">Contact</a></li>
+            <li><a title="know about us">About</a></li>
+          </ul>
+          <div class="leftmove">
+          <button class="search">Login</button> 
+        </div>
+        </nav>
+  
+    <div class="outer">
+      <div class="inner">
+       <div class="slider">
+        <div class="s1">
+          <img src="./img/job1.jpg" alt="">
+        </div>
+        <div class="s2">
+          <img src="./img/job2.jpg" alt="">
+        </div>
+        <div class="s3">
+          <img src="./img/job3.jpg" alt="">
+        </div>
+        <div class="s4">
+          <img src="./img/job4.jpg" alt="">
+        </div>
+       </div>
+       <button id="movelogin">Apply for Job</button>
+       </div>
+    </div>
+    <div class="jobPage" id="jobPage">
+      <div class="text"><h1>Available jobs</h1></div>
+      <div class="job2">
+      <div class="jobcard1">
+        <img src="./img/medicalCoding.jpg" alt="">
+         <h3>Medical Coding</h3>
+      </div>
+      <div class="jobcard2">
+        <img src="./img/mechanival.jpg" alt="">
+        <h3>Machinary</h3>
+      </div>
+      <div class="jobcard3">
+        <img src="./img/designer.jpg" alt="">
+        <h3>Designing</h3>
+      </div>
+      <div class="jobcard4">
+        <img src="./img/cooking.jpg" alt="">
+        <h3>Cooking</h3>
+      </div>
+    </div>
+    </div>
+    <div class="company" id="company">
+      <div><img src="./img/aws.jpg" alt=""></div>
+      <div><img src="./img/microsoft.png" alt=""></div>
+      <div><img src="./img/relme.png" alt=""></div>
+      <div><img src="./img/udemy.png" alt=""></div>
+      <div><img src="./img/amazon.png" alt=""></div>
+      <div><img src="./img/dmart.jpg" alt=""></div>
+      <div><img src="./img/nse.png" alt=""></div>
+      <div><img src="./img/facebook.png" alt=""></div>
+      <div><img src="./img/samsung.png" alt=""></div>
+      <div><img src="./img/flipkart.png" alt=""></div>
+      <div><img src="./img/google.png" alt=""></div>
+      <div><img src="./img/nike.png" alt=""></div>
+      <div><img src="./img/wipro.png" alt=""></div>
+      <div><img src="./img/infosys.png" alt=""></div>
+      <div><img src="./img/reliance.png" alt=""></div>
+      <div><img src="./img/himalaya.jpg" alt=""></div>
+    </div>
+    <script>
+      $(document).ready(function(){
+        $("#movelogin").click(function(){
+          window.location.href="task2/login.html";
+       })
+      })
+    </script>
+</body>
+</html>
